@@ -43,7 +43,7 @@ export const TextGenerateEffect = ({
                   : 'dark:text-white text-black'
               } opacity-0 font-extrabold`}
               style={{
-                filter: filter ? 'blur(30px)' : 'none',
+                filter: filter ? 'blur(40px)' : 'none',
               }}
             >
               {word}{' '}

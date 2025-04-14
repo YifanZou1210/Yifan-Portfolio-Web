@@ -59,7 +59,7 @@ const Hero = () => {
             Hi there 👋 I&apos;m Yifan,a Next.js Developer based in Boston
           </p>
 
-          <a href="#about" className='mt-3'>
+          <a href="#projects" className="mt-3">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
