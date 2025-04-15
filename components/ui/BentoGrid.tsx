@@ -4,7 +4,10 @@ import { useState } from 'react'
 import { IoCopyOutline } from 'react-icons/io5'
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from 'react-lottie'
+// 动态导入Lottie，禁用SSR
+const Lottie = dynamic(() => import('react-lottie'), {
+  ssr: false,
+})
 
 import { cn } from '@/utils/cn'
 
@@ -12,6 +15,7 @@ import { cn } from '@/utils/cn'
 import GridGlobe from './GridGlobe'
 import animationData from '@/data/confetti.json'
 import MagicButton from '../MagicButton'
+import dynamic from 'next/dynamic'
 
 export const BentoGrid = ({
   className,
