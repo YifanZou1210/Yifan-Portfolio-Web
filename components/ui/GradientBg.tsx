@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import { cn } from '@/utils/cn'
 import { useEffect, useRef, useState } from 'react'
@@ -40,23 +41,24 @@ export const BackgroundGradientAnimation = ({
   const [tgX, setTgX] = useState(0)
   const [tgY, setTgY] = useState(0)
   useEffect(() => {
-    document.body.style.setProperty(
-      '--gradient-background-start',
-      gradientBackgroundStart
-    )
-    document.body.style.setProperty(
-      '--gradient-background-end',
-      gradientBackgroundEnd
-    )
-    document.body.style.setProperty('--first-color', firstColor)
-    document.body.style.setProperty('--second-color', secondColor)
-    document.body.style.setProperty('--third-color', thirdColor)
-    document.body.style.setProperty('--fourth-color', fourthColor)
-    document.body.style.setProperty('--fifth-color', fifthColor)
-    document.body.style.setProperty('--pointer-color', pointerColor)
-    document.body.style.setProperty('--size', size)
-    document.body.style.setProperty('--blending-value', blendingValue)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (typeof document !== 'undefined') {
+      const styleVars = {
+        '--gradient-background-start': gradientBackgroundStart,
+        '--gradient-background-end': gradientBackgroundEnd,
+        '--first-color': firstColor,
+        '--second-color': secondColor,
+        '--third-color': thirdColor,
+        '--fourth-color': fourthColor,
+        '--fifth-color': fifthColor,
+        '--pointer-color': pointerColor,
+        '--size': size,
+        '--blending-value': blendingValue,
+      }
+
+      Object.entries(styleVars).forEach(([key, value]) => {
+        document.body.style.setProperty(key, value)
+      })
+    }
   }, [])
 
   useEffect(() => {
@@ -72,7 +74,6 @@ export const BackgroundGradientAnimation = ({
     }
 
     move()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tgX, tgY])
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {

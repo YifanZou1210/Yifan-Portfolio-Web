@@ -1,3 +1,4 @@
+'use client'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export const navItems = [
@@ -227,11 +228,11 @@ export const socialMedia = [
   {
     id: 1,
     img: '/git.svg',
-    link:'https://github.com/YifanZou1210'
+    link: 'https://github.com/YifanZou1210',
   },
   {
     id: 2,
     img: '/link.svg',
-    link: 'https://www.linkedin.com/in/even-y-f-zou/'
+    link: 'https://www.linkedin.com/in/even-y-f-zou/',
   },
 ]
