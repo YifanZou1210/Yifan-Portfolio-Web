@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+
 export const navItems = [
   { name: 'About', link: '#about' },
   { name: 'Projects', link: '#projects' },
@@ -5,6 +7,24 @@ export const navItems = [
   { name: 'Contact', link: '#contact' },
 ]
 
+import React from 'react'
+
+export const links = [
+  {
+    title: 'Github',
+    icon: (
+      <FaGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: 'https://github.com/YifanZou1210',
+  },
+  {
+    title: 'LinekedIn',
+    icon: (
+      <FaLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: 'https://www.linkedin.com/in/even-y-f-zou/',
+  },
+]
 export const gridItems = [
   {
     id: 1,
@@ -53,7 +73,8 @@ export const gridItems = [
     description: 'The Inside Scoop',
     className: 'md:col-span-3 md:row-span-2',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
-    titleClassName: 'justify-center md:justify-start lg:justify-center text-white',
+    titleClassName:
+      'justify-center md:justify-start lg:justify-center text-white',
     img: '/b5.svg',
     spareImg: '/grid.svg',
   },
@@ -63,7 +84,8 @@ export const gridItems = [
     description: '',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
     imgClassName: '',
-    titleClassName: 'justify-center md:max-w-full max-w-60 text-center text-white',
+    titleClassName:
+      'justify-center md:max-w-full max-w-60 text-center text-white',
     img: '',
     spareImg: '',
   },
@@ -205,13 +227,11 @@ export const socialMedia = [
   {
     id: 1,
     img: '/git.svg',
+    link:'https://github.com/YifanZou1210'
   },
   {
     id: 2,
-    img: '/twit.svg',
-  },
-  {
-    id: 3,
     img: '/link.svg',
+    link: 'https://www.linkedin.com/in/even-y-f-zou/'
   },
 ]
