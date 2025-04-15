@@ -1,3 +1,4 @@
+'use client'
 import Hero from '@/components/Hero'
 import Grid from '@/components/Grid'
 import Footer from '@/components/Footer'
