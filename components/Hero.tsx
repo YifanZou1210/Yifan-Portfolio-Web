@@ -56,13 +56,14 @@ const Hero = () => {
              *  change md:text-6xl, add more responsive code
              */}
             <TextGenerateEffect
-              words="Hi there 👋 I'm Yifan , a Next.js Developer based in Boston"
+              words="Hi there 👋 I'm Yifan , a Fullstack Developer based in Boston"
               filter={false}
               duration={2}
               className="font text-center text-[40px] mt-15 md:text-5xl lg:text-10xl"
             />
             <p className="text-center text-black font-mono md:tracking-wider mb-4 text-sm md:text-lg lg:text-shadow-2xs">
-              Transforming Concepts into Seamless User Experiences
+              Expertise in MERN, Next.js, Spring Boot ecosystem, driven by
+              curiosity for dive deeper and real-world interaction design
             </p>
 
             <a href="#projects" className="mt-5 sm:mt-8 md:mt-10">
